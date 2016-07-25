@@ -10,6 +10,16 @@ function config ($stateProvider, $urlRouterProvider) {
 			templateUrl: 'templates/home.tpl.html',	
 			controller: 'HomeController as vm'
 		})
+		.state('root.add',{
+			url:'/add',
+			templateUrl: 'templates/add.tpl.html',
+			controller: 'AddController as vm'
+		})
+		.state('root.userdetails', {
+			url: '/details',
+			templateUrl: 'templates/userdetails.tpl.html',
+			controller: 'UserDetailsController as vm'
+		})
 	$urlRouterProvider.otherwise('/'); 
 }
 
