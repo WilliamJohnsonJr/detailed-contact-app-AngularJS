@@ -1,6 +1,8 @@
-function AddController ($http, SERVER) {
-
+function AddController (ContactService, $state) {
+	ContactService.add(contact).then( (res) => {
+	      $state.go('root.home');
+	    });
 }
 
-AddController.$inject = ['$http', 'SERVER'];
+AddController.$inject = ['ContactService', '$state'];
 export { AddController };

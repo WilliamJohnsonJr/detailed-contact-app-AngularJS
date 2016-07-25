@@ -1,0 +1,23 @@
+<div class="homePageContainer">
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Contacts List
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="listContainer">
+    <div class="contactContainer" ng-repeat="contact in vm.contacts">
+      <a href="/#/details/{{vm.contact._id}}">
+        <div class="photoContainer">
+          <img ng-src="{{vm.contact.photo}}">
+        </div>
+        <div class="contactNameContainer">
+          {{ vm.contact.name }}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

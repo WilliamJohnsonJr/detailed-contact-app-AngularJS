@@ -1,1 +1,14 @@
-@import 'bulma'
+@import 'bulma';
+
+.contactContainer {
+	display: flex;
+	align-items: center;
+}
+
+.photoContainer {
+	margin: 20px;
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	overflow: hidden;
+}

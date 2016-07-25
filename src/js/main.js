@@ -8,6 +8,7 @@ import { HomeController } from './controllers/home.controller';
 import { AddController } from './controllers/add.controller';
 import { UserDetailsController } from './controllers/userdetails.controller.js';
 
+import {ContactService} from './services/contact.service';
 
 angular
 	.module('app', ['ui.router'])
@@ -15,4 +16,5 @@ angular
 	.constant('SERVER', SERVER)
 	.controller ('HomeController', HomeController)
 	.controller ('AddController', AddController)
-	.controller ('UserDetailsController', UserDetailsController);
+	.controller ('UserDetailsController', UserDetailsController)
+	.service ('ContactService', ContactService);
