@@ -1,7 +1,15 @@
 function AddController (ContactService, $state) {
-	ContactService.add(contact).then( (res) => {
+
+	  let vm = this;
+
+  vm.addContact = addContact;
+
+  	function addContact(contact){
+  		
+		ContactService.create(contact).then( (res) => {
 	      $state.go('root.home');
-	    });
+	    });;
+	}
 }
 
 AddController.$inject = ['ContactService', '$state'];

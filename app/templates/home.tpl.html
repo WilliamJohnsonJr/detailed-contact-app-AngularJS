@@ -8,14 +8,14 @@
       </div>
     </div>
   </section>
-  <div class="listContainer">
-    <div class="contactContainer" ng-repeat="contact in vm.contacts">
-      <a href="/#/details/{{vm.contact._id}}">
+  <div class="listContainer" ng-repeat="contact in vm.contacts">
+    <div class="contactContainer">
+      <a class="contactContainerA" href="/#/details/{{contact._id}}">
         <div class="photoContainer">
-          <img ng-src="{{vm.contact.photo}}">
+          <img ng-src="{{contact.photo}}">
         </div>
         <div class="contactNameContainer">
-          {{ vm.contact.name }}
+          {{ contact.name }}
         </div>
       </a>
     </div>

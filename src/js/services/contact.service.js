@@ -1,31 +1,27 @@
 function ContactService ($http, SERVER) {
 	let vm = this;
 
-	vm.add = add;
+	this.create = create;
+	this.getContacts = getContacts;
 
-	vm.contact = {};
+	function getContacts () {
+		return $http.get(SERVER.URL)
+	}
 
-	function getPhoto (contact){
-		$http({
-			method: 'GET',
-			url: 'https://randomuser.me/api/',
-			dataType: 'json',
-			success: function(data) {
-				console.log(data);
-			}
-		}).then((res)=>{
-			console.log(res.data);
-			contact.photo = res.data.results[0].picture.medium;
-		});
-	};
-
-	function add (contact) {
-		getPhoto(vm.contact).then((res)=>{
+	function create (contact) {
+		return getPhoto().then(function(response){
+			contact.photo = response.data.results[0].picture.medium;
 			return $http.post(SERVER.URL, contact);	
-			vm.contact = {};
-		});		
+		})
 	};
 
+    function getPhoto(){
+	  return $http({
+		method: 'GET',
+		url: 'https://randomuser.me/api/',
+		dataType: 'json'
+	 })
+    }
 }
 
 ContactService.$inject = ['$http', 'SERVER'];
