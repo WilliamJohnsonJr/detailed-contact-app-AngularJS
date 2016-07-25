@@ -1,0 +1,45 @@
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="detailHero">
+          <div class="detailHeroPhoto">
+            <img ng-src="{{vm.contact.largePhoto}}">
+          </div>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="contactDetailContainer">
+    <div class="detailName">
+      <span class="icon">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </span>
+      <span class="contactData">
+        {{vm.contact.name}}
+      </span>
+    </div>
+    <div class="detailEmail">
+      <span class="icon">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </span>
+      <span class="contactData">    
+      {{ vm.contact.email }}
+      </span>
+    </div>
+    <div class="detailPhone">
+      <span class="icon">
+        <i class="fa fa-mobile" aria-hidden="true"></i>
+      </span>
+      <span class="contactData">    
+      {{ vm.contact.phone }}
+      </span>
+    </div>
+    <div class="detailLocation">
+      <span class="icon">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+      </span>
+      <span class="contactData">    
+      {{ vm.contact.location }}
+      </span>
+    </div>        
+  </div>

@@ -16,7 +16,7 @@ function config ($stateProvider, $urlRouterProvider) {
 			controller: 'AddController as vm'
 		})
 		.state('root.userdetails', {
-			url: '/details',
+			url: '/details/:id',
 			templateUrl: 'templates/userdetails.tpl.html',
 			controller: 'UserDetailsController as vm'
 		})

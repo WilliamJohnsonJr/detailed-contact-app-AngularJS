@@ -1,5 +1,11 @@
 @import 'bulma';
 
+.contactContainer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .contactContainerA {
 	display: flex;
 	align-items: center;
@@ -13,9 +19,37 @@
     overflow: hidden;
 }
 
+.delete {
+	margin-right: 10%;
+}
+
 a {
 	color: #69707A;
 	&:hover{
 		color: #97CD76;
 	}
 }
+
+.detailHero{
+	display: flex;
+	justify-content: center;
+}
+
+.detailHeroPhoto {
+	width: 128px;
+	height: 128px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.contactDetailContainer{
+	div{
+		padding: 10px;
+		border-bottom: 1px solid lightgray;
+	}
+}
+
+.contactData{
+	margin-left: 10px;
+}
+
