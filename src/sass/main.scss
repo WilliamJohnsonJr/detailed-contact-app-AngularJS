@@ -1,13 +1,35 @@
 @import 'bulma';
 
+html {
+	background-color: darken(#F5F7FA, 10%);
+}
+
+.container {
+	padding: 0 4vw 0 4vw;
+}
+
+.addPageContainer{
+	padding: 0 0 4vw 0;
+}
+
+.homePageContainer{
+	padding: 0 0 4vw 0;
+}
+
+.userDetailsContainer{
+	padding: 0 0 4vw 0;
+}
+
 .navHeaderSpan{
 	margin-right: 20px;
 }
 
 .contactContainer{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 0 4vw 0 4vw;
 }
 
 .contactContainerA {
@@ -73,4 +95,14 @@ a {
 
 .layoutTitle {
 	font-size: 40px;
+	padding-top: 20px;
+}
+
+
+.control {
+	margin-top: 15px;
+}
+
+.contactDetailContainer div {
+	background: white;
 }
